@@ -12,15 +12,13 @@ use Rector\Core\NodeAnalyzer\ScopeAnalyzer;
 use Rector\Core\NodeAnalyzer\UnreachableStmtAnalyzer;
 use Rector\Core\PhpParser\Node\BetterNodeFinder;
 use Rector\NodeTypeResolver\Node\AttributeKey;
-use Symplify\Astral\NodeTraverser\SimpleCallableNodeTraverser;
 
 final class UnreachableStmtScopeManipulator
 {
     public function __construct(
         private readonly ScopeAnalyzer $scopeAnalyzer,
         private readonly BetterNodeFinder $betterNodeFinder,
-        private readonly UnreachableStmtAnalyzer $unreachableStmtAnalyzer,
-        private readonly SimpleCallableNodeTraverser $simpleCallableNodeTraverser
+        private readonly UnreachableStmtAnalyzer $unreachableStmtAnalyzer
     ) {
     }
 
